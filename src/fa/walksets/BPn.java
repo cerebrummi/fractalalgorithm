@@ -24,8 +24,8 @@ public class BPn implements Walkset
    }
 
    @Override
-   public void print()
+   public String toString()
    {
-      System.out.println("BPn = < " + (n == null ? "" : n.name()) + " >");
+      return "BPn = < " + (n == null ? "" : n.name()) + " >";
    }
 }

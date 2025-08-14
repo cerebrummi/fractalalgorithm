@@ -15,8 +15,8 @@ public class Cn implements Walkset
    }
 
    @Override
-   public void print()
+   public String toString()
    {
-      System.out.println("Cn = < " + leftmostElement + ", ... infinity >");
+      return "Cn = < " + leftmostElement + ", ... infinity >";
    }
 }

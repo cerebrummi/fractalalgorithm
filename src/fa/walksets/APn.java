@@ -20,7 +20,7 @@ public class APn implements Walkset
    }
 
    @Override
-   public void print()
+   public String toString()
    {
       String start = "APn < ";
       StringJoiner joiner = new StringJoiner(",");
@@ -29,6 +29,6 @@ public class APn implements Walkset
          joiner.add(element.name());
       }
       String end = " >";
-      System.out.println(start + joiner.toString() + end);
+      return start + joiner.toString() + end;
    }
 }

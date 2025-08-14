@@ -24,7 +24,6 @@ public class SFA
    {
       // starting state
       checkStartingState();
-      printWalksets();
    }
    
 
@@ -72,20 +71,18 @@ public class SFA
          walksetCPn.copy(walksetBn.getN());
          walksetCPn.change(walksetBn.getN());
       }
-      
-      printWalksets();
    }
 
-   private void printWalksets()
+   public void printWalksets()
    {
-      walksetAn.print();
-      walksetAPn.print();
+      System.out.println(walksetAn);
+      System.out.println(walksetAPn);
       
-      walksetBn.print();
-      walksetBPn.print();
+      System.out.println(walksetBn);
+      System.out.println(walksetBPn);
       
-      walksetCn.print();
-      walksetCPn.print();
+      System.out.println(walksetCn);
+      System.out.println(walksetCPn);
    }
 
 

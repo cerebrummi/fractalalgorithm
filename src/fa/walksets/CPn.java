@@ -59,8 +59,8 @@ public class CPn implements Walkset
    }
 
    @Override
-   public void print()
+   public String toString()
    {
-      System.out.println("CPn = < " + Arrays.toString(list.toArray()) + " >");
+      return "CPn = < " + Arrays.toString(list.toArray()) + " >";
    }
 }

@@ -2,5 +2,5 @@ package fa.walksets;
 
 public interface Walkset
 {
-   public void print();
+   public String toString();
 }

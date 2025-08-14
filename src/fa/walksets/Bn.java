@@ -22,8 +22,8 @@ public class Bn implements Walkset
    }
 
    @Override
-   public void print()
+   public String toString()
    {
-      System.out.println("Bn = < " + (n == null ? "" : n) + " >");
+      return "Bn = < " + (n == null ? "" : n) + " >";
    }
 }

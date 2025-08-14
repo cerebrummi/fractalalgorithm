@@ -18,7 +18,7 @@ public class An implements Walkset
    }
 
    @Override
-   public void print()
+   public String toString()
    {
       String start = "An < ";
       StringJoiner joiner = new StringJoiner(",");
@@ -27,6 +27,6 @@ public class An implements Walkset
          joiner.add(String.valueOf(element));
       }
       String end = " >";
-      System.out.println(start + joiner.toString() + end);
+      return start + joiner.toString() + end;
    }
 }
