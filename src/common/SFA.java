@@ -1,6 +1,9 @@
 package common;
 
+import java.util.List;
+
 import enums.Symbol;
+import fa.Sieve;
 import fa.walksets.APn;
 import fa.walksets.An;
 import fa.walksets.BPn;
@@ -72,6 +75,11 @@ public class SFA
          walksetCPn.change(walksetBn.getN());
       }
    }
+   
+   public boolean isCurrentBnPrime()
+   {
+      return walksetBPn.getN().equals(Symbol.P);
+   }
 
    public void printWalksets()
    {
@@ -85,6 +93,23 @@ public class SFA
       System.out.println(walksetCPn);
    }
 
+   public Sieve getCurrentSieve()
+   {
+      Sieve sieve = new Sieve(walksetCPn.getCurrentSize());
+      List<Symbol> listCPn = walksetCPn.getList();
+      
+      int index = walksetCn.getLeftmostElement();
+      for(Symbol element : listCPn)
+      {
+         if(element.equals(Symbol.L))
+         {
+            sieve.addLEnvelope(index);
+         }
+         index++;
+      }
+      
+      return sieve;
+   }
 
    private boolean checkStartingState()
    {
