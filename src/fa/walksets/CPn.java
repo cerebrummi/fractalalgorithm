@@ -63,14 +63,4 @@ public class CPn implements Walkset
    {
       return "CPn = < " + Arrays.toString(list.toArray()) + " >";
    }
-   
-   public int getCurrentSize()
-   {
-      return list.size();
-   }
-
-   public LinkedList<Symbol> getList()
-   {
-      return list;
-   }
 }
