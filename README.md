@@ -1,0 +1,2 @@
+# fractalalgorithm
+SFA with FA
