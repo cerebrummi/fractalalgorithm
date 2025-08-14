@@ -3,28 +3,30 @@ package fa.walksets;
 import java.util.Arrays;
 import java.util.LinkedList;
 
-public class CPn implements walkset
+import enums.Symbol;
+
+public class CPn implements Walkset
 {
-   LinkedList<String> list = new LinkedList<>();
+   private LinkedList<Symbol> list = new LinkedList<>();
    
    public CPn()
    {
-      list.add("L");
+      list.add(Symbol.L);
    }
    
    public void move()
    {
-      String element = list.pollFirst();
+      Symbol element = list.pollFirst();
       list.add(element);
    }
    
    public void copy(int n)
    {
-      LinkedList<String> copiedList = new LinkedList<>();
+      LinkedList<Symbol> copiedList = new LinkedList<>();
       
       for(int i = 0; i < n; i++)
       {
-         for(String element : list)
+         for(Symbol element : list)
          {
             copiedList.add(element);
          }
@@ -35,23 +37,23 @@ public class CPn implements walkset
    
    public void change(int n)
    {
-      LinkedList<String> copy = new LinkedList<>();
-      for(String element: list)
+      LinkedList<Symbol> copy = new LinkedList<>();
+      for(Symbol element: list)
       {
          copy.add(element);
       }
       int index = 1;
       for(int i = 0; i < copy.size(); i++)
       {
-         if(index%n==0 && list.get(i).equals("L"))
+         if(index%n==0 && list.get(i).equals(Symbol.L))
          {
-            list.set(i, "M");
+            list.set(i, Symbol.M);
          }
          index++;
       }
    }
    
-   public String getLeftmostElement()
+   public Symbol getLeftmostElement()
    {
       return list.getFirst();
    }

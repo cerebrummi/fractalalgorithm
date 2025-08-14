@@ -1,8 +1,8 @@
 package fa.walksets;
 
-public class Cn implements walkset
+public class Cn implements Walkset
 {
-   int leftmostElement = 1;
+   private int leftmostElement = 1;
 
    public int cutLeftmostElement()
    {

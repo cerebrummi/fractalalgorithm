@@ -1,6 +1,6 @@
 package fa.walksets;
 
-public interface walkset
+public interface Walkset
 {
    public void print();
 }

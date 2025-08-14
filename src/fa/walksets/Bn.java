@@ -1,8 +1,8 @@
 package fa.walksets;
 
-public class Bn implements walkset
+public class Bn implements Walkset
 {
-   Integer n;
+   private Integer n;
 
    public Integer cutN()
    {
@@ -24,6 +24,6 @@ public class Bn implements walkset
    @Override
    public void print()
    {
-      System.out.println("Bn = < " + n + " >");
+      System.out.println("Bn = < " + (n == null ? "" : n) + " >");
    }
 }

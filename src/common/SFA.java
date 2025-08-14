@@ -1,5 +1,6 @@
 package common;
 
+import enums.Symbol;
 import fa.walksets.APn;
 import fa.walksets.An;
 import fa.walksets.BPn;
@@ -10,14 +11,14 @@ import fa.walksets.Cn;
 public class SFA
 {
    // production line one
-   An walksetAn = new An();
-   Bn walksetBn = new Bn();
-   Cn walksetCn = new Cn();
+   private An walksetAn = new An();
+   private Bn walksetBn = new Bn();
+   private Cn walksetCn = new Cn();
 
    // production line two
-   APn walksetAPn = new APn();
-   BPn walksetBPn = new BPn();
-   CPn walksetCPn = new CPn();
+   private APn walksetAPn = new APn();
+   private BPn walksetBPn = new BPn();
+   private CPn walksetCPn = new CPn();
 
    public SFA()
    {
@@ -29,7 +30,7 @@ public class SFA
 
    public void step()
    {
-      System.out.println("========== step start ==========");
+      
       // update walkset An
       if(walksetBn.getN()!= null)
       {
@@ -54,26 +55,25 @@ public class SFA
       // find wether n in Bn is prime
       if(walksetBn.getN() == 1)
       {
-         walksetBPn.setN("1");
+         walksetBPn.setN(Symbol.ONE);
       }
       else
       {
-         if(walksetBPn.getN().equals("L"))
+         if(walksetBPn.getN().equals(Symbol.L))
          {
-            walksetBPn.setN("P");
+            walksetBPn.setN(Symbol.P);
          }
       }
       
       // update walksetCPn
       walksetCPn.move();
-      if(walksetBPn.getN().equals("P"))
+      if(walksetBPn.getN().equals(Symbol.P))
       {
          walksetCPn.copy(walksetBn.getN());
          walksetCPn.change(walksetBn.getN());
       }
       
       printWalksets();
-      System.out.println("========== step end ===========");
    }
 
    private void printWalksets()
@@ -97,7 +97,7 @@ public class SFA
          return false;
       }
       
-      if(walksetBn.cutN()!= null)
+      if(walksetBn.getN()!= null)
       {
          System.out.println("Error in starting state of Bn");
          return false;
@@ -121,7 +121,7 @@ public class SFA
          return false;
       }
       
-      if(!walksetCPn.getLeftmostElement().equals("L"))
+      if(!walksetCPn.getLeftmostElement().equals(Symbol.L))
       {
          System.out.println("Error in starting state of CPn");
          return false;

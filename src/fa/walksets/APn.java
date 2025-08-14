@@ -3,16 +3,18 @@ package fa.walksets;
 import java.util.ArrayList;
 import java.util.StringJoiner;
 
-public class APn implements walkset
-{
-   ArrayList<String> list = new ArrayList<>();
+import enums.Symbol;
 
-   public void addElement(String n)
+public class APn implements Walkset
+{
+   private ArrayList<Symbol> list = new ArrayList<>();
+
+   public void addElement(Symbol n)
    {
       list.add(n);
    }
 
-   public ArrayList<String> getList()
+   public ArrayList<Symbol> getList()
    {
       return list;
    }
@@ -22,9 +24,9 @@ public class APn implements walkset
    {
       String start = "APn < ";
       StringJoiner joiner = new StringJoiner(",");
-      for (String element : list)
+      for (Symbol element : list)
       {
-         joiner.add(String.valueOf(element));
+         joiner.add(element.name());
       }
       String end = " >";
       System.out.println(start + joiner.toString() + end);

@@ -3,9 +3,9 @@ package fa.walksets;
 import java.util.ArrayList;
 import java.util.StringJoiner;
 
-public class An implements walkset
+public class An implements Walkset
 {
-   ArrayList<Integer> list = new ArrayList<>();
+   private ArrayList<Integer> list = new ArrayList<>();
 
    public void addElement(int n)
    {

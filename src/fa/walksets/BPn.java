@@ -1,22 +1,24 @@
 package fa.walksets;
 
-public class BPn implements walkset
-{
-   String n;
+import enums.Symbol;
 
-   public String getN()
+public class BPn implements Walkset
+{
+   private Symbol n;
+
+   public Symbol getN()
    {
       return n;
    }
 
-   public void setN(String n)
+   public void setN(Symbol n)
    {
       this.n = n;
    }
 
-   public String cutN()
+   public Symbol cutN()
    {
-      String copyOfN = n;
+      Symbol copyOfN = n;
       n = null;
       return copyOfN;
    }
@@ -24,6 +26,6 @@ public class BPn implements walkset
    @Override
    public void print()
    {
-      System.out.println("BPn = < " + n + " >");
+      System.out.println("BPn = < " + (n == null ? "" : n.name()) + " >");
    }
 }
