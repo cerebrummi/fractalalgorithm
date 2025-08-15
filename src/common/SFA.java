@@ -8,7 +8,8 @@ import fa.walksets.Bn;
 import fa.walksets.CPn;
 import fa.walksets.Cn;
 
-/**
+/** A fractal algorithm shows prime number patterning.
+ * 
  * @author heeren Heeren, B. (2025). A fractal algorithm shows prime number
  *         patterning. Zenodo. https://doi.org/10.5281/zenodo.16829092
  * 
