@@ -12,9 +12,9 @@ public class An implements Walkset
       list.add(n);
    }
 
-   public ArrayList<Integer> getList()
+   public boolean isEmpty()
    {
-      return list;
+      return list.isEmpty();
    }
 
    @Override

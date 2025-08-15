@@ -21,6 +21,11 @@ public class Bn implements Walkset
       this.n = n;
    }
 
+   public boolean isEmpty()
+   {
+      return n == null;
+   }
+
    @Override
    public String toString()
    {

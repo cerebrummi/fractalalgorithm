@@ -22,6 +22,11 @@ public class BPn implements Walkset
       n = null;
       return copyOfN;
    }
+   
+   public boolean isEmpty()
+   {
+      return n == null;
+   }
 
    @Override
    public String toString()

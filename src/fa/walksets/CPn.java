@@ -14,13 +14,13 @@ public class CPn implements Walkset
       list.add(Symbol.L);
    }
    
-   public void move()
+   public void fractalProcedureMove()
    {
       Symbol element = list.pollFirst();
       list.add(element);
    }
    
-   public void copy(int n)
+   public void fractalProcedureCopy(int n)
    {
       LinkedList<Symbol> copiedList = new LinkedList<>();
       
@@ -35,7 +35,7 @@ public class CPn implements Walkset
       list = copiedList;
    }
    
-   public void change(int n)
+   public void fractalProcedureChange(int n)
    {
       LinkedList<Symbol> copy = new LinkedList<>();
       for(Symbol element: list)
